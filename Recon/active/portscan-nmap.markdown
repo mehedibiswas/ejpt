@@ -1,6 +1,6 @@
 Different nmap scan techniques
 - nmap 192.168.50.52[default scan]
-- nmap -Pn 192.168.50.52
+- nmap -Pn 192.168.50.52 [some times windows hosts disble ping request than -Pn is used]
 - nmap -Pn -p- 192.168.50.52
 - nmap -Pn -p80 192.168.50.52
 - nmap -Pn -p 80,443,139,145 192.168.50.52
