@@ -14,3 +14,4 @@ There are several techniques to discover hosts
 - nmap -sn 10.10.12.72 10.10.12.75 
 - nmap -sn -iL targets.txt [for a list of ips]
 - nmap -sn -PS 10.10.12.72 [used for hosts discovery not ports]
+- nmap -sn -Pn 10.1.0.8/24 [use this for windows as well others hosts]
