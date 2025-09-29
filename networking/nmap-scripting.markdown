@@ -9,6 +9,7 @@
 - nmap -sS -sV --script=mongodb-info,ftp-anon -p- -T4 192.224.77.3 [run multiple scripts at a time]
 - nmap -sS -sV --script=ftp-* -p- -T4 192.224.77.3 [run all the ftp scripts using wildcards]
 - nmap -sS -A -p- -T4 192.224.77.4 [Aggressive scan]
+- nmap -p445 --script smb-enum-users --script-args smbusername=administrator,smbpassword=smbserver_771 demo.ine.local[how to pass agruments in scripts]
 
 
 
