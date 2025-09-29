@@ -1,7 +1,7 @@
 #### Firewall detection 
-- sA [detects filter sending ack ping]
+- -sA [detects filter sending ack ping]
 ###### nmap -Pn -sA -p445,3389 10.4.27.93
-- -Pn [disable host discovery]
+- -Pn [disable host discovery telling the nmap that host is already up don't need to discover]
 
 ####  IDS evasion
 - nmap -Pn -sS -sV -F -f 10.4.27.93
