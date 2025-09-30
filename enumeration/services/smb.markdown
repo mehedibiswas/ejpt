@@ -27,4 +27,5 @@ between computers on local network.
 #### Note
 - smbclient is a kali linux tool
 - rpcclient [another tool suit for talking to windows]
+- nmap -p 139,445 --script=smb-os-discovery,smb-protocols 192.46.111.3 [nmap script to find info about smb,one more thing smb group name is domain name are same]
 
