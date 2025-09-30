@@ -27,3 +27,6 @@ It is an open source relational database management system.
 - services
 - loot
 - creds
+#### metasploit wordlists
+- user_name=/usr/share/metaspoit-framework/data/wordlists/common_users.txt
+- password=/usr/share/metaspoit-framework/data/wordlists/unix_passwords.txt
