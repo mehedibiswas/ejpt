@@ -23,6 +23,13 @@ between computers on local network.
 - smbclient -L \\\\192.91.46.3\\ -U admin [this will list all the shares]
 - smbclient \\\\192.91.46.3\\public -U admin [this will access the share whose name is public]
 - get flag.txt [download file into attacker machine]
+  
+#### Tools:
+- nmap
+- metasploit
+- nmblookup
+- smbclient
+- rpcclient
 
 #### Note
 - smbclient is a kali linux tool
