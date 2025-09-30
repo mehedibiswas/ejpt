@@ -31,6 +31,10 @@ between computers on local network.
 - smbclient
 - rpcclient
 
+#### metasploit wordlists
+- user_name=/usr/share/metaspoit-framework/data/wordlists/common_users.txt
+- password=/usr/share/metaspoit-framework/data/wordlists/unix_passwords.txt
+
 #### Note
 - smbclient is a kali linux tool
 - rpcclient [another tool suit for talking to windows]
