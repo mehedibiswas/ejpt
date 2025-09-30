@@ -26,4 +26,5 @@ between computers on local network.
 
 #### Note
 - smbclient is a kali linux tool
+- rpcclient [another tool suit for talking to windows]
 
