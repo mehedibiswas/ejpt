@@ -6,7 +6,7 @@ Focus of ftp enumeration is version and user detection
 #### procedures
 - search portscan [to ensure ftp is running]
 - set up hosts and every thing requires to  run.
-- Now search ftp which produce huge result and minimize result we can use "search type=auxiliary name=ftp" 
+- Now search ftp which produce huge result and minimize result we can use "search type:auxiliary name:ftp" 
 ##### Version module select
 - we select for version type so that using this module we can detect the ftp version and
 then search a module for that version.
