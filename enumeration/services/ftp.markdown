@@ -1,4 +1,5 @@
 #### FTP Enumeration(metasploit)
+Focus of ftp enumeration is version and user detection
 #### metasploit setup
 - service postgresql start
 - Add workspace [workspace -a ftp-enum]
