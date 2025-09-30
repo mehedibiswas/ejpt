@@ -26,7 +26,7 @@ the lab has no browser.So I use curl "curl ip".In title I found xoda.
 - "run autoroute -s 192.113.124.2(new ip)"
 - Make the meterpreter shell in background "background"
 - If required we can again back in meterpreter using "sessions" command
-- Again we search in msf "search portscan".This time it for new ip.
+- Again we search in msf "search portscan".This time it for new ip (target 2).
 - Use a module for new target that is found by the first target. As we add the route we can perfom scan it from my (attacker) machine to victim2 machine via first victim.
 
 
