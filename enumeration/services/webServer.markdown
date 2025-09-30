@@ -26,3 +26,7 @@
 - auxiliary/scanner/http/http_header
 - auxiliary/scanner/http/http_version
 - auxiliary/scanner/http/robots_txt
+  
+#### metasploit wordlists
+- user_name=/usr/share/metaspoit-framework/data/wordlists/common_users.txt
+- password=/usr/share/metaspoit-framework/data/wordlists/unix_passwords.txt
