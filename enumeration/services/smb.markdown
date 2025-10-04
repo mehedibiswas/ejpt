@@ -30,6 +30,7 @@ between computers on local network.
 - nmblookup
 - smbclient
 - rpcclient
+- smbmap
 
 #### metasploit wordlists
 - user_name=/usr/share/metaspoit-framework/data/wordlists/common_users.txt
