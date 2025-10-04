@@ -1,0 +1,42 @@
+#!/bin/bash
+# save the file in sh format
+# Obtain the target and wordlist from command-line arguments
+target="$1"
+wordlist="$2"
+
+# Check if both arguments are provided
+if [ -z "$target" ] || [ -z "$wordlist" ]; then
+    echo "Usage: $0 <target> <wordlist>"
+    exit 1
+fi
+
+# Check if the wordlist file exists
+if [ ! -f "$wordlist" ]; then
+    echo "Error: Wordlist file '$wordlist' not found."
+    exit 1
+fi
+
+# Initialize an array to store successful shares
+successful_shares=()
+
+# Loop through each share in the wordlist
+while read -r share; do
+    echo -e "Testing share: \e[34m$share\e[0m"
+    smbclient "//$target/$share" -N -c "ls" &>/dev/null
+
+    if [ $? -eq 0 ]; then
+        successful_shares+=("$share")
+    fi
+done < "$wordlist"
+
+# Output the results
+if [ ${#successful_shares[@]} -gt 0 ]; then
+    echo -e "\n\e[32m[+] Successfully accessed shares:\e[0m"
+    for share in "${successful_shares[@]}"; do
+        echo -e "\e[32m[+] \e[34m$share\e[0m"
+    done
+else
+    echo -e "\e[31m[-] No accessible shares found.\e[0m"
+fi
+
+echo -e "\n[+] SMB enumeration completed."
