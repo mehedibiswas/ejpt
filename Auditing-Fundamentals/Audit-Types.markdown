@@ -2,7 +2,7 @@
 - For penetration testers, understanding these different types of security
 audits is crucial to tailor their testing strategies effectively.
 
-#### types of security audits
+#### Types of security audits
 ##### Internal Audits
 - Conducted by the organization's internal
 audit team or security professionals to
