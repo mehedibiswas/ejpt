@@ -10,7 +10,7 @@
 - msfconsole
 - search rdp_scanner
 - use auxiliary/scanner/rdp/rdp_scanner
-- set all requires options [ can can confirm setting different different port to which one is actual port for rdp if it is not default]
+- set all requires options [ it can confirm setting different different port to which one is actual port for rdp if port is not default]
 - run 
 - this will confirm which rdp port and versions
 ##### Hydra
