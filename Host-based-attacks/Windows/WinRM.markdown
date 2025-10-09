@@ -3,7 +3,7 @@
 - Windows Remote management is a Windows remote management protocol that can be used to facilitate remote access with Windows systems over HTTP(S).
 - Microsoft implementated WinRM in to Windows in order to make life easier for system administrators.
 - WinRM is typically used in the following ways
-- -Remotely access and interact with Windows hosts on a local network
+- - Remotely access and interact with Windows hosts on a local network
 - - Remotely access and execute commands on Windows systems
 - - Manage and configure windows systems remotely
 - WinRM typically uses TCP port 5985 and 5986 (HTTPS)
