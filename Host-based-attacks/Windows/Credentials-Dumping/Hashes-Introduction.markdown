@@ -6,8 +6,8 @@ algorithm is used to generate the new value. The result of a hashing algorithm i
 hash or hash value.
 - Authentication and verification of user credentials is facilitated by the Local Security Authority (LSA).
 - Windows versions up to Windows Server 2003 utilize two different types of hashes:
-- + LM
-- + NTLM
+ + LM
+ + NTLM
 - Windows disables LM hashing and utilizes NTLM hashing from Windows Vista onwards.
 #### Sam Database
 - SAM (Security Account Manager) is a database file that is responsible for managing user accounts and passwords on Windows. All user account passwords stored in
@@ -21,9 +21,9 @@ attackers typically utilize in-memory techniques and tools to dump SAM hashes fr
 #### LM (LanMan)
 - LM is the default hashing algorithm that was implemented in Windows operating systems prior to NT4.0.
 - The protocol is used to hash user passwords, and the hashing process can be broken down into the following steps:
-- - + The password is broken into two seven-character chunks.
-- - + All characters are then converted into uppercase.
-- - + Each chunk is then hashed separately with the DES algorithm
+   + The password is broken into two seven-character chunks.
+   + All characters are then converted into uppercase.
+   + Each chunk is then hashed separately with the DES algorithm
 - LM hashing is generally considered to be a weak protocol and can easily be cracked, primarily because the password hash does not include salts,
 consequently making brute-force and rainbow table attacks effective against LM hashes.
 #### NTLM (NTHash)
@@ -33,7 +33,7 @@ username and password to authenticate successfully.
 - From Windows Vista onwards, Windows disables LM hashing and utilizes NTLM hashing.
 - When a user account is created, it is encrypted using the MD4 hashing algorithm, while the original password is disposed of.
 - NTLM improves upon LM in the following ways:
-- + Does not split the hash in to two chunks.
-- + Case sensitive.
-- + Allows the use of symbols and unicode characters.
+ + Does not split the hash in to two chunks.
+ + Case sensitive.
+ + Allows the use of symbols and unicode characters.
 
