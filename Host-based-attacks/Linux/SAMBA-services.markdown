@@ -27,6 +27,7 @@
 - enum4linux -a -u admin -p password1 192.56.47.2 [ this enumerate all the information ]
 -
 #### Tools 
+- metasploit
 - smbmap
 - smbclient
 - enum4linux
