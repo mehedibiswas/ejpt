@@ -31,7 +31,7 @@
 #### Post-Exploitation
 - Local enumeration
 - Privilege Escalation
-- - Credential Access
+- Credential Access
 - Persistance
 - Defense Evasion
 - Lateral Movement
