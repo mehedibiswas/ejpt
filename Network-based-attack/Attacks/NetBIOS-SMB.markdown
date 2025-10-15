@@ -63,6 +63,11 @@ SMB and NetBIOS enumeration
 - net use D: \\10.4.26.4\Documents [It will connect the shared folder Documents on the remote host 10.4.26.4 and assign it to drive letter D: on your local machine.]
 - net use K: \\10.4.26.4\k$ [$ symbol means adminitrative hidden ]
 - dir K: [ then we access it as normal drive or files ]
-- 
-
+#### Tools:
+- nbtscan
+- nmblookup
+- smbclient
+- proxychians
+#### Resource
+- https://medium.com/@sam_sepiol_/pivoting-deep-into-networks-proxychains-and-metasploit-autoroute-in-action-56339d66e466
 
