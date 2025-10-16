@@ -3,9 +3,9 @@
 - It allows network administrators to query devices for status information,configure certain setting,and receive alerts or trap when specific events occur.
 
 - SNMP is an application layer protocol that typically uses UDP for transport.It involves three primary components
-- + SNMP Manager: The system responisble for quering and interacting with SNMP agents on network devices.
-- + SNMP Agent: Software running on network devices that responds to SNMP queries and send traps.
-- + Management Information Base (MIB): A hierarchical database  that defines the structure of data available through SNMP.Each piece of data has a unique Object Identifier (OID).
+ + SNMP Manager: The system responisble for quering and interacting with SNMP agents on network devices.
+ + SNMP Agent: Software running on network devices that responds to SNMP queries and send traps.
+ + Management Information Base (MIB): A hierarchical database  that defines the structure of data available through SNMP.Each piece of data has a unique Object Identifier (OID).
  - Versions of SNMP: 
   + SNMPv1: The earliest version,using community strings (essentially passwords ) for authentication.
   + SNMPv2c: An improved version with support for bulk transfer but still relying on community strings for authentication
