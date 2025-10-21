@@ -36,7 +36,7 @@ Bypassing UAC With UACMe
 - pgrep explorer  [ for migrate to explorer session this will give us id ]
 -  migrate 2448 [ 2448 found from previous command id and this will give us x64 bit windows ,we can check it again using sysinfo] 
 - getuid [ for checking user ]
-- getrivs [ trying to get privileges the current user have]
+- getprivs [ trying to get privileges the current user have]
 - shell [ for getting shell ]
 - net users [ list all users ]
 - net localgroup administrators [ this will show members of administrative group ]
