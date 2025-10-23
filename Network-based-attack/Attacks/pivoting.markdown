@@ -17,3 +17,5 @@ Read this after reading NetBIOS-SMB  file
 - find the open ports in target2 using metasploit module
 - portfwd add -l 1234 -p 80 -r target2.test.local [ for portforwing ]
 - nmap -sV -p 1234 localhost [ use the same command for accessing target2 from our attacking machine ]
+#### Resources 
+- https://medium.com/@sam_sepiol_/pivoting-deep-into-networks-proxychains-and-metasploit-autoroute-in-action-56339d66e466
