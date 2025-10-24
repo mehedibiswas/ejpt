@@ -33,3 +33,13 @@
 - set SESSION 2 [ set meterpreter sessions ]
 - run 
 - this will give us passwords hashes
+#### Metasploit-Module 
+- post/multi/gather/ssh_creds
+- post/multi/gather/docker_creds
+- post/linux/gather/hashdump
+- post/linux/gather/ecryptfs_creds
+- post/linux/gather/enum_psk
+- post/linux/gather/enum_xchat
+- post/linux/gather/phpmyadmin_credsteal
+- post/linux/gather/pptpd_chap_secrets
+- post/linux/manage/sshkey_persistence
