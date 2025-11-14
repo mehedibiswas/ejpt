@@ -1,0 +1,98 @@
+ftp:anonymous logged in allow
+updates.txt file
+
+auditor blog post
+
+
+
+nmap -sS -sV -sC -p- -A 192.168.100.52
+Starting Nmap 7.92 ( https://nmap.org ) at 2025-11-13 06:31 IST
+Nmap scan report for ip-192-168-100-52.ap-south-1.compute.internal (192.168.100.52)
+Host is up (0.00045s latency).
+Not shown: 65528 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 65534    65534         318 Apr 18  2022 updates.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:192.168.100.5
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 8c:4a:3b:f0:cf:8a:e3:6b:46:c2:d2:96:a1:cf:7e:05 (RSA)
+|   256 69:05:0a:14:2f:27:7f:53:33:df:30:46:24:81:a8:31 (ECDSA)
+|_  256 6e:24:41:43:96:00:ce:0b:b2:bf:61:0b:6d:c9:e5:05 (ED25519)
+80/tcp   open  http          Apache httpd 2.4.41
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Index of /
+| http-ls: Volume /
+| SIZE  TIME              FILENAME
+| -     2018-02-21 17:28  drupal/
+|_
+139/tcp  open  netbios-ssn   Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn   Samba smbd 4.13.17-Ubuntu (workgroup: WORKGROUP)
+3306/tcp open  mysql         MySQL 5.5.5-10.3.34-MariaDB-0ubuntu0.20.04.1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.3.34-MariaDB-0ubuntu0.20.04.1
+|   Thread ID: 49
+|   Capabilities flags: 63486
+|   Some Capabilities: IgnoreSpaceBeforeParenthesis, LongColumnFlag, SupportsCompression, Support41Auth, InteractiveClient, ConnectWithDatabase, Speaks41ProtocolNew, DontAllowDatabaseTableColumn, SupportsTransactions, IgnoreSigpipes, Speaks41ProtocolOld, SupportsLoadDataLocal, ODBCClient, FoundRows, SupportsMultipleStatments, SupportsMultipleResults, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: )1[W#FvA~zj'{\8C'7"@
+|_  Auth Plugin Name: mysql_native_password
+3389/tcp open  ms-wbt-server xrdp
+MAC Address: 02:02:36:CF:6E:97 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=11/13%OT=21%CT=1%CU=41589%PV=Y%DS=1%DC=D%G=Y%M=020236%
+OS:TM=69152DFA%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=10F%TI=Z%CI=Z%II=
+OS:I%TS=A)OPS(O1=M2301ST11NW7%O2=M2301ST11NW7%O3=M2301NNT11NW7%O4=M2301ST11
+OS:NW7%O5=M2301ST11NW7%O6=M2301ST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=
+OS:F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M2301NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%
+OS:T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T
+OS:=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=
+OS:0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(
+OS:R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+Service Info: Host: IP-192-168-100-52; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-time: 
+|   date: 2025-11-13T01:01:45
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: IP-192-168-100-, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.13.17-Ubuntu)
+|   Computer name: ip-192-168-100-52
+|   NetBIOS computer name: IP-192-168-100-52\x00
+|   Domain name: ap-south-1.compute.internal
+|   FQDN: ip-192-168-100-52.ap-south-1.compute.internal
+|_  System time: 2025-11-13T01:01:45+00:00
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.45 ms ip-192-168-100-52.ap-south-1.compute.internal (192.168.100.52)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 27.30 seconds
