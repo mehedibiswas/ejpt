@@ -1,0 +1,368 @@
+enum4linux 192.168.100.52 
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Thu Nov 13 06:48:33 2025
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 192.168.100.52
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ====================================================== 
+|    Enumerating Workgroup/Domain on 192.168.100.52    |
+ ====================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ============================================== 
+|    Nbtstat Information for 192.168.100.52    |
+ ============================================== 
+Looking up status of 192.168.100.52
+        IP-192-168-100- <00> -         B <ACTIVE>  Workstation Service
+        IP-192-168-100- <03> -         B <ACTIVE>  Messenger Service
+        IP-192-168-100- <20> -         B <ACTIVE>  File Server Service
+        WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+        WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+
+        MAC Address = 00-00-00-00-00-00
+
+ ======================================= 
+|    Session Check on 192.168.100.52    |
+ ======================================= 
+[+] Server 192.168.100.52 allows sessions using username '', password ''
+
+ ============================================= 
+|    Getting domain SID for 192.168.100.52    |
+ ============================================= 
+Domain Name: WORKGROUP
+Domain Sid: (NULL SID)
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ======================================== 
+|    OS information on 192.168.100.52    |
+ ======================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+[+] Got OS info for 192.168.100.52 from smbclient: 
+[+] Got OS info for 192.168.100.52 from srvinfo:
+        IP-192-168-100-Wk Sv PrQ Unx NT SNT ip-192-168-100-52 server (Samba, Ubuntu)
+        platform_id     :       500
+        os version      :       6.1
+        server type     :       0x809a03
+
+ =============================== 
+|    Users on 192.168.100.52    |
+ =============================== 
+Use of uninitialized value $users in print at ./enum4linux.pl line 874.
+Use of uninitialized value $users in pattern match (m//) at ./enum4linux.pl line 877.
+
+Use of uninitialized value $users in print at ./enum4linux.pl line 888.
+Use of uninitialized value $users in pattern match (m//) at ./enum4linux.pl line 890.
+
+ =========================================== 
+|    Share Enumeration on 192.168.100.52    |
+ =========================================== 
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        print$          Disk      Printer Drivers
+        shared          Disk      shared
+        IPC$            IPC       IPC Service (ip-192-168-100-52 server (Samba, Ubuntu))
+Reconnecting with SMB1 for workgroup listing.
+
+        Server               Comment
+        ---------            -------
+
+        Workgroup            Master
+        ---------            -------
+        WORKGROUP            
+
+[+] Attempting to map shares on 192.168.100.52
+//192.168.100.52/print$ Mapping: DENIED, Listing: N/A
+//192.168.100.52/shared Mapping: OK, Listing: OK
+//192.168.100.52/IPC$   [E] Can't understand response:
+NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
+
+ ====================================================== 
+|    Password Policy Information for 192.168.100.52    |
+ ====================================================== 
+
+
+[+] Attaching to 192.168.100.52 using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+[+] Found domain(s):
+
+        [+] IP-192-168-100-52
+        [+] Builtin
+
+[+] Password Info for Domain: IP-192-168-100-52
+
+        [+] Minimum password length: 5
+        [+] Password history length: None
+        [+] Maximum password age: 37 days 6 hours 21 minutes 
+        [+] Password Complexity Flags: 000000
+
+                [+] Domain Refuse Password Change: 0
+                [+] Domain Password Store Cleartext: 0
+                [+] Domain Password Lockout Admins: 0
+                [+] Domain Password No Clear Change: 0
+                [+] Domain Password No Anon Change: 0
+                [+] Domain Password Complex: 0
+
+        [+] Minimum password age: None
+        [+] Reset Account Lockout Counter: 30 minutes 
+        [+] Locked Account Duration: 30 minutes 
+        [+] Account Lockout Threshold: None
+        [+] Forced Log off Time: 37 days 6 hours 21 minutes 
+
+
+[+] Retieved partial password policy with rpcclient:
+
+Password Complexity: Disabled
+Minimum Password Length: 5
+
+
+ ================================ 
+|    Groups on 192.168.100.52    |
+ ================================ 
+
+[+] Getting builtin groups:
+
+[+] Getting builtin group memberships:
+
+[+] Getting local groups:
+
+[+] Getting local group memberships:
+
+[+] Getting domain groups:
+
+[+] Getting domain group memberships:
+
+ ========================================================================= 
+|    Users on 192.168.100.52 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ========================================================================= 
+[I] Found new SID: S-1-22-1
+[I] Found new SID: S-1-5-21-358612304-1164100054-1635889351
+[I] Found new SID: S-1-5-32
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''
+S-1-5-32-500 *unknown*\*unknown* (8)
+S-1-5-32-501 *unknown*\*unknown* (8)
+S-1-5-32-502 *unknown*\*unknown* (8)
+S-1-5-32-503 *unknown*\*unknown* (8)
+S-1-5-32-504 *unknown*\*unknown* (8)
+S-1-5-32-505 *unknown*\*unknown* (8)
+S-1-5-32-506 *unknown*\*unknown* (8)
+S-1-5-32-507 *unknown*\*unknown* (8)
+S-1-5-32-508 *unknown*\*unknown* (8)
+S-1-5-32-509 *unknown*\*unknown* (8)
+S-1-5-32-510 *unknown*\*unknown* (8)
+S-1-5-32-511 *unknown*\*unknown* (8)
+S-1-5-32-512 *unknown*\*unknown* (8)
+S-1-5-32-513 *unknown*\*unknown* (8)
+S-1-5-32-514 *unknown*\*unknown* (8)
+S-1-5-32-515 *unknown*\*unknown* (8)
+S-1-5-32-516 *unknown*\*unknown* (8)
+S-1-5-32-517 *unknown*\*unknown* (8)
+S-1-5-32-518 *unknown*\*unknown* (8)
+S-1-5-32-519 *unknown*\*unknown* (8)
+S-1-5-32-520 *unknown*\*unknown* (8)
+S-1-5-32-521 *unknown*\*unknown* (8)
+S-1-5-32-522 *unknown*\*unknown* (8)
+S-1-5-32-523 *unknown*\*unknown* (8)
+S-1-5-32-524 *unknown*\*unknown* (8)
+S-1-5-32-525 *unknown*\*unknown* (8)
+S-1-5-32-526 *unknown*\*unknown* (8)
+S-1-5-32-527 *unknown*\*unknown* (8)
+S-1-5-32-528 *unknown*\*unknown* (8)
+S-1-5-32-529 *unknown*\*unknown* (8)
+S-1-5-32-530 *unknown*\*unknown* (8)
+S-1-5-32-531 *unknown*\*unknown* (8)
+S-1-5-32-532 *unknown*\*unknown* (8)
+S-1-5-32-533 *unknown*\*unknown* (8)
+S-1-5-32-534 *unknown*\*unknown* (8)
+S-1-5-32-535 *unknown*\*unknown* (8)
+S-1-5-32-536 *unknown*\*unknown* (8)
+S-1-5-32-537 *unknown*\*unknown* (8)
+S-1-5-32-538 *unknown*\*unknown* (8)
+S-1-5-32-539 *unknown*\*unknown* (8)
+S-1-5-32-540 *unknown*\*unknown* (8)
+S-1-5-32-541 *unknown*\*unknown* (8)
+S-1-5-32-542 *unknown*\*unknown* (8)
+S-1-5-32-543 *unknown*\*unknown* (8)
+S-1-5-32-544 BUILTIN\Administrators (Local Group)
+S-1-5-32-545 BUILTIN\Users (Local Group)
+S-1-5-32-546 BUILTIN\Guests (Local Group)
+S-1-5-32-547 BUILTIN\Power Users (Local Group)
+S-1-5-32-548 BUILTIN\Account Operators (Local Group)
+S-1-5-32-549 BUILTIN\Server Operators (Local Group)
+S-1-5-32-550 BUILTIN\Print Operators (Local Group)
+S-1-5-32-1000 *unknown*\*unknown* (8)
+S-1-5-32-1001 *unknown*\*unknown* (8)
+S-1-5-32-1002 *unknown*\*unknown* (8)
+S-1-5-32-1003 *unknown*\*unknown* (8)
+S-1-5-32-1004 *unknown*\*unknown* (8)
+S-1-5-32-1005 *unknown*\*unknown* (8)
+S-1-5-32-1006 *unknown*\*unknown* (8)
+S-1-5-32-1007 *unknown*\*unknown* (8)
+S-1-5-32-1008 *unknown*\*unknown* (8)
+S-1-5-32-1009 *unknown*\*unknown* (8)
+S-1-5-32-1010 *unknown*\*unknown* (8)
+S-1-5-32-1011 *unknown*\*unknown* (8)
+S-1-5-32-1012 *unknown*\*unknown* (8)
+S-1-5-32-1013 *unknown*\*unknown* (8)
+S-1-5-32-1014 *unknown*\*unknown* (8)
+S-1-5-32-1015 *unknown*\*unknown* (8)
+S-1-5-32-1016 *unknown*\*unknown* (8)
+S-1-5-32-1017 *unknown*\*unknown* (8)
+S-1-5-32-1018 *unknown*\*unknown* (8)
+S-1-5-32-1019 *unknown*\*unknown* (8)
+S-1-5-32-1020 *unknown*\*unknown* (8)
+S-1-5-32-1021 *unknown*\*unknown* (8)
+S-1-5-32-1022 *unknown*\*unknown* (8)
+S-1-5-32-1023 *unknown*\*unknown* (8)
+S-1-5-32-1024 *unknown*\*unknown* (8)
+S-1-5-32-1025 *unknown*\*unknown* (8)
+S-1-5-32-1026 *unknown*\*unknown* (8)
+S-1-5-32-1027 *unknown*\*unknown* (8)
+S-1-5-32-1028 *unknown*\*unknown* (8)
+S-1-5-32-1029 *unknown*\*unknown* (8)
+S-1-5-32-1030 *unknown*\*unknown* (8)
+S-1-5-32-1031 *unknown*\*unknown* (8)
+S-1-5-32-1032 *unknown*\*unknown* (8)
+S-1-5-32-1033 *unknown*\*unknown* (8)
+S-1-5-32-1034 *unknown*\*unknown* (8)
+S-1-5-32-1035 *unknown*\*unknown* (8)
+S-1-5-32-1036 *unknown*\*unknown* (8)
+S-1-5-32-1037 *unknown*\*unknown* (8)
+S-1-5-32-1038 *unknown*\*unknown* (8)
+S-1-5-32-1039 *unknown*\*unknown* (8)
+S-1-5-32-1040 *unknown*\*unknown* (8)
+S-1-5-32-1041 *unknown*\*unknown* (8)
+S-1-5-32-1042 *unknown*\*unknown* (8)
+S-1-5-32-1043 *unknown*\*unknown* (8)
+S-1-5-32-1044 *unknown*\*unknown* (8)
+S-1-5-32-1045 *unknown*\*unknown* (8)
+S-1-5-32-1046 *unknown*\*unknown* (8)
+S-1-5-32-1047 *unknown*\*unknown* (8)
+S-1-5-32-1048 *unknown*\*unknown* (8)
+S-1-5-32-1049 *unknown*\*unknown* (8)
+S-1-5-32-1050 *unknown*\*unknown* (8)
+[+] Enumerating users using SID S-1-22-1 and logon username '', password ''
+S-1-22-1-1000 Unix User\ubuntu (Local User)
+S-1-22-1-1001 Unix User\auditor (Local User)
+S-1-22-1-1002 Unix User\dbadmin (Local User)
+[+] Enumerating users using SID S-1-5-21-358612304-1164100054-1635889351 and logon username '', password ''
+S-1-5-21-358612304-1164100054-1635889351-500 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-501 IP-192-168-100-52\nobody (Local User)
+S-1-5-21-358612304-1164100054-1635889351-502 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-503 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-504 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-505 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-506 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-507 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-508 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-509 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-510 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-511 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-512 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-513 IP-192-168-100-52\None (Domain Group)
+S-1-5-21-358612304-1164100054-1635889351-514 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-515 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-516 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-517 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-518 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-519 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-520 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-521 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-522 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-523 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-524 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-525 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-526 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-527 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-528 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-529 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-530 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-531 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-532 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-533 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-534 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-535 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-536 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-537 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-538 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-539 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-540 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-541 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-542 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-543 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-544 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-545 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-546 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-547 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-548 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-549 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-550 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1000 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1001 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1002 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1003 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1004 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1005 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1006 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1007 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1008 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1009 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1010 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1011 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1012 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1013 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1014 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1015 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1016 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1017 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1018 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1019 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1020 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1021 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1022 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1023 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1024 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1025 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1026 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1027 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1028 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1029 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1030 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1031 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1032 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1033 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1034 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1035 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1036 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1037 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1038 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1039 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1040 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1041 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1042 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1043 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1044 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1045 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1046 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1047 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1048 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1049 *unknown*\*unknown* (8)
+S-1-5-21-358612304-1164100054-1635889351-1050 *unknown*\*unknown* (8)
+
+ =============================================== 
+|    Getting printer info for 192.168.100.52    |
+ =============================================== 
+No printers returned.
+
+
+enum4linux complete on Thu Nov 13 06:48:51 2025
+
